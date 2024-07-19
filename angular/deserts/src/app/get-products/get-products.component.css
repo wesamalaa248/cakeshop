@@ -1,0 +1,35 @@
+.container{
+    background-color: #ffebd4d3;
+    color: rgb(70, 38, 38);
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-family: poppins, arial, helvetica neue, sans-serif;
+    font-weight: 400;
+}
+.card{
+    background-color:  #fff7eeee;
+}
+p{
+    margin-top: 20px;
+    color: rgb(83, 52, 52);
+}
+.message-box {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 15px;
+    background-color: #4caf50; /* Green background for success message */
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it appears above other elements */
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .message-box.error {
+    background-color: #f44336; /* Red background for error message */
+  }
+
+  @media (max-width: 767.98px) { .border-sm-start-none { border-left: none !important; } }

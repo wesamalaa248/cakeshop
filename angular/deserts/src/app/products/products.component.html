@@ -1,0 +1,22 @@
+<section class="bg-image" style="background-image: url('../assets/background.jpg');">
+<div class="container ">
+    <div class="row row-cols-1 row-cols-md-4 row-cols-sm-2 g-4">
+        <div class="card-deck col" *ngFor="let p of products">
+          <div class="card h-100" >
+            <a href="product_details/{{p.newid}}"> <img src="{{p.pro_img}} " class="card-img-top" alt="..."> </a>
+            <div class="card-body" >
+              <h6 class="card-title" > {{p.pro_name}}</h6>
+              <p > {{p.pro_price | currency:' ج.م ' }}</p>
+              <div class="card-footer" >
+                <i class="fa-regular fa-heart" (click)="addtocart(p.pro_id)"></i>
+                <i class="fa-solid fa-basket-shopping"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="message-box col-md-3" *ngIf="message">
+      {{ message}}
+      </div>
+  </div>
+</section>

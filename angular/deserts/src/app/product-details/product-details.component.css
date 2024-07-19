@@ -1,0 +1,38 @@
+.container .row{
+    background-color: rgb(255, 255, 255);
+    padding: 30px 50px;
+    height: auto;
+}
+.card{
+    border: none ;
+}
+.card > img{
+    height: 230px; 
+    width: 250px; 
+    margin: auto; 
+}
+.col-md-8 >.card-body{
+    margin-bottom: 10px;
+}
+.card-title {
+    color: rgba(71, 3, 3, 0.856);
+  }
+.card-body> a{
+    margin-top: 20px;
+    background-color: rgba(71, 3, 3, 0.856);
+    color: #fabebe;
+}
+.card-body> a:hover{
+    color: #ffffff;
+}
+.nav-tabs {
+    border: none;
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid #663A2A;
+}
+.nav-tabs .nav-item a{
+    color: #FCB4A9;
+    background: #663A2A;
+    border-color: #663A2A;
+}

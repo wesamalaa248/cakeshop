@@ -1,0 +1,129 @@
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+}
+.bg-image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+  }
+
+.sidebar {
+    height: 100%;
+    width: 80px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffecd7ad;
+    overflow-x: hidden;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+.sidebar .logo img {
+    max-width: 80%;
+    height: auto;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #665151;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar a:hover {
+    color: #8d4747;
+}
+
+.sidebar a i {
+    margin-right: 10px;
+}
+
+.sidebar .active {
+    background-color: #dabe94;
+    color: white;
+}
+
+.sidebar .logout {
+    margin-top: auto;
+    padding-bottom: 20px;
+}
+
+#main {
+    margin-left: 250px;
+    padding: 16px;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the sidebar 100% wide */
+@media screen and (max-width: 600px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidebar a {float: left;}
+    #main {
+        margin-left: 0;
+    }
+    .sidebar .logo img {
+        max-width: 20%;
+        height: auto;
+    }
+}
+.container{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center; 
+    height: 100vh;
+    margin: 0 auto ;
+    border-radius: 20px;
+    padding: 30px;
+  }
+  
+  .card {
+    width: 250px;
+    padding: 20px;
+    margin: 12px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #6d3434;
+  }
+  .card-link {
+    color: #6d3434; 
+    text-decoration: none;
+  }
+  
+  .icon {
+    width: 50px;
+    height: 50px;
+    background-color: #ffecd7c9; /* Change color as needed */
+    border-radius: 50%;
+    margin: -45px auto 20px 20px; /* Adjust the top margin for positioning */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon img {
+    max-width: 60%;
+    max-height: 60%;
+  }
+  
+  
+  

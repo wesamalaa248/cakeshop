@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row g-3">
+        <div class="div1"> 
+            <h2>Show All Catogeries</h2>
+            <div class="message-box" *ngIf="message || message2">
+           {{ message || message2 }}
+           </div>
+        </div>
+        <div class="col-md-12" >
+            <div class='table-responsive'>
+                <table class='table table-hover'>
+                <thead class='table-warning'>
+                <tr><th class="image-col">Name</th><th class="image-col">Image</th><th class="action-col">Update</th><th class="action-col">Remove</th></tr>
+                </thead>
+                <tr *ngFor="let c of catogery" >
+                    <td>{{c.cat_name}}</td>
+                    <td><img [src]="c.cat_img" class="card-img-top" alt="..."></td>
+                    <td><button><i class="fa-regular fa-pen-to-square"></i></button></td>
+                    <td><button (click)="remove(c.cat_id)"><i class="fa-solid fa-trash" style="color: #df0c0c;"></i></button></td>
+                </tr>
+                </table>
+                </div>
+        </div>
+    </div>
+</div>
+
+

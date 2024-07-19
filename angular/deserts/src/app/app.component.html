@@ -1,0 +1,62 @@
+ <header *ngIf="!isloggned()">
+  <nav class="navbar navbar-expand-lg" style="background-color: #ffecd7ad;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="../assets/logo.png" alt="Logo" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/menu">Category</a> <!-- Corrected spelling of "Category" -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About Us</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+        <!-- Right links -->
+        <ul class="navbar-nav usericon ms-auto mb-2 mb-lg-0"> 
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <!-- Added "nav-link" class and fixed dropdown toggle -->
+              <i class="fa-solid fa-user"></i>
+            </a>
+            
+            <ul class="dropdown-menu user">
+              <h6 *ngIf="islogout"> Hi,{{username}}</h6>
+              <li *ngIf="islogout"><a href="#"><i class="fa-regular fa-user"></i> My Account</a></li>
+              <li *ngIf="islogout"><a href="/favourite"><i class="fa-regular fa-heart"></i> Wishlist</a></li>
+              <li *ngIf="issignup"><a class="dropdown-item" href="/signup"> Sign Up</a></li> 
+              <li><hr class="dropdown-divider"></li>
+              <li *ngIf="islogin"><a class="dropdown-item" href="/login">Log In</a></li> 
+              <!-- <li><hr class="dropdown-divider"></li> -->
+              <li *ngIf="islogout"><a class="dropdown-item" (click)="logout()">Log Out</a></li> 
+          </ul>
+          </li>
+          <li class="nav-item dropdown ">
+         <a class="nav-link" href="#" >
+         <i class="fa-solid fa-shopping-basket"></i>
+         <sup class="cart_counter">0</sup>
+         </a>
+         <ul class="dropdown-menu shopping">
+          <p>You have no items in your shopping cart. </p>
+          <li><hr class="dropdown-divider"></li>
+         </ul>
+        </li>  
+        <li class="nav-item "> 
+          <a class="nav-link" href="#">
+           <i class="fa-solid fa-search"></i></a>
+        </li> 
+        </ul>
+        <!-- Right links -->
+      </div>
+    </div>
+  </nav>
+  
+</header> 
+
+
+<router-outlet> </router-outlet>

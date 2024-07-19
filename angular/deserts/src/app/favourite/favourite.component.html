@@ -1,0 +1,25 @@
+<div class="wishlist-container">
+        <h3>Wishlist</h3>
+        <table class="wishlist-table">
+            <thead>
+                <tr><th>Image</th><th>Product(S)</th><th>Price</th><th>Remove</th></tr>
+            </thead>
+            <tbody>
+                <tr class="wishlist-item" *ngFor="let item of cartItems">
+                    <!-- <td><input type="checkbox"></td> -->
+                    <td><img src="{{item.pro_img}}" alt=".."></td>
+                    <td>
+                        <span class="product-name">{{item.pro_name}}</span><br>
+                        <!-- <span class="product-status">Product is not published</span> -->
+                    </td>
+                    <td>{{item.pro_price | currency:' ج.م '}}</td>
+                    <!-- <td><input type="number" value="1" min="1"></td> -->
+                    <td><i (click)="removefromcart(item.product_id)" class="fa-solid fa-trash-can remove-btn" style="color: #f2071f;"></i></td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+
+
+

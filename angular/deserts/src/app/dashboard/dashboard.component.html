@@ -1,0 +1,25 @@
+<div class="sidebar">
+    <div class="logo">
+        <img src="assets/logo.png" alt="Logo">
+    </div>
+    <a href="#" class="active"><i class="fas fa-home"></i> </a>
+    <a href="#"><i class="fa-regular fa-star"></i></a>
+    <a href="#"><i class="fa-solid fa-gear"></i></a>
+    <a href="#"><i class="fa-solid fa-bars"></i></a>
+    <a href="this.logout()" class="logout"><i class="fas fa-sign-out-alt"></i> </a>
+</div>
+<section class="bg-image" style="background-image: url('../assets/dashboard.jpg');">
+<div class="container">
+    <div class="row g-3">
+    <div class="card row-col-md-6" *ngFor="let card of cards">
+      <div class="icon">
+        <i [class]="card.icon"></i>
+      </div>
+      <div class="card-content">
+       <a href="{{card.link}}" class="card-link"> <h4>{{card.title}}</h4> </a>
+      </div>
+    </div>
+    </div>
+</div>
+</section>
+  

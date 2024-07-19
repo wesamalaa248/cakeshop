@@ -1,0 +1,43 @@
+<form [formGroup]="form">
+    <div class="row g-3">
+        <div class="div1"> 
+            <h2>Add new Products</h2>
+        </div>
+        <div class="col-md-12">
+            <label class="form-label">Products Name</label>
+            <input type="text" class="form-control" name="name" formControlName="name">
+            <!-- <div *ngIf="f['name'].touched && f['name'].invalid" style="color: red;">
+            <div *ngIf="f['name'].errors && f['name'].errors['required']"> Catogery Name is required</div>
+            </div> -->
+        </div>
+        <div class="col-md-6">
+            <label  class="form-label">Price:</label>
+            <input type="number" class="form-control" name="price" formControlName="price">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Quantity:</label>
+            <input type="text" class="form-control" name="quantity" formControlName="quantity">
+          </div>
+          <div class="col-md-12">
+            <label class="form-label">Description:</label>
+            <input type="text" class="form-control" name="description" formControlName="description">
+          </div>
+        <div class="col-md-12">
+            <label  class="form-label">Image</label>
+            <input type="file" class="form-control" name="image">
+          </div>
+          <div class="col-md-12">
+            <label class="form-label">Catogery Name:</label>
+            <select class="form-select form-select-sm" name="catogery" id="cat" formControlName="catogery">  
+                <option *ngFor="let c of catogery" value="{{c.cat_id}}"> {{c.cat_name}} </option>
+                </select>
+          </div>
+          
+        <div class="d-grid col-6 mx-auto">
+            <input type="submit" class="btn btn-danger" name="submit" (click)="submit()" value="Add product">
+        </div>
+    </div>
+    <div class="message-box col-md-3" *ngIf="message || message2">
+      {{ message || message2 }}
+    </div>
+</form>

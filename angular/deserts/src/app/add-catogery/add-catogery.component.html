@@ -1,0 +1,25 @@
+<form [formGroup]="form">
+    <div class="row g-3">
+        <div class="div1"> 
+            <h2>Add new Catogery</h2>
+        </div>
+        <div class="col-md-12">
+            <label class="form-label">Catogery Name</label>
+            <input type="text" class="form-control" name="name" formControlName="name">
+            <div *ngIf="f['name'].touched && f['name'].invalid" style="color: red;">
+            <div *ngIf="f['name'].errors && f['name'].errors['required']"> Catogery Name is required</div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <label  class="form-label">Image:</label>
+            <input type="file" id="uploadImage" class="form-control" name="uploadFile[]" class="file" (change)="onFileChange($event)" formControlName="file">
+          </div>
+          
+        <div class="d-grid col-6 mx-auto">
+            <input type="submit" class="btn btn-danger" name="submit" (click)="submit()" [disabled]="form.invalid" value="Add Catogery">
+        </div>
+        <div class="message-box col-md-3" *ngIf="message || message2">
+            {{ message || message2 }}
+        </div>
+    </div>
+</form>

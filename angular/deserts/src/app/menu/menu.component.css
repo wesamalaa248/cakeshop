@@ -1,0 +1,62 @@
+.container-fluid {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.float-child {
+    border: 2px solid rgb(255, 255, 255);
+}  
+.left-div {
+    background-color: #fdf0eb;
+    padding: 20px;
+    height: 620px; /* Set the height as needed */
+    overflow: auto;
+}
+.right-div {
+    padding: 20px;
+    height: 620px;
+    background-size: cover;
+    background-position: center;
+    
+}
+@media (max-width: 768px) {
+    .left-div, .right-div {
+        flex-basis: 100%; /* Each div takes 100% width */
+    }
+    .right-div{
+      z-index: -1;
+      width: 100%;
+      height: 150px;
+    }
+}
+
+/* gallery */
+.card{
+background-color: #ffffff15;
+border: none;
+margin-bottom: 20px;
+}
+.card > .card-title{
+padding: 5px;
+}
+.card > a > img{
+    height: 220px;
+    border-radius: 10px;
+}
+
+
+  
+  /* @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  } */
+  
+  

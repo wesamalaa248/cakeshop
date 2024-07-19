@@ -1,0 +1,21 @@
+.bg-image{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    background: linear-gradient(to right, rgba(248, 228, 172, 0.479), rgba(248, 223, 197, 0.61));
+    padding: 20px 0;
+    
+}
+/* .gradient-custom-3 {
+    
+    background: linear-gradient(to right, rgba(248, 228, 172, 0.479), rgba(248, 223, 197, 0.61))
+    
+    } */
+    .gradient-custom-4 {
+
+    background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+    }
+    .card{
+        margin-top: 20px;
+    }
